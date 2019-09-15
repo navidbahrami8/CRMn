@@ -1,0 +1,10 @@
+mat-sidnav-container {
+  height: 100%;
+}
+mat-sidnav, mat-sidnav-content {
+  padding: 16px;
+}
+mat-sidnav {
+  background-color: lightcoral ;
+  width: 200px;
+}

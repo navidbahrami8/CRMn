@@ -1,0 +1,217 @@
+<nav class="fixed-top">
+    <div class="row">
+    <div class="mr-3">
+        <button style="max-height: 55px; max-width: 100px "  class="btn btn" [ngClass]="{'btn-light': opened == false, 'btn-dark' : opened == true} " (click)="sidenav.toggle()">
+            {{opened ? 'منو' : 'منو' }}<br/><mat-icon aria-hidden="false" aria-label="Example menu icon">menu</mat-icon>
+        </button>
+    </div>
+  </div>
+  </nav>
+  <div class="row" style="height: 900px">
+    <div>
+    <mat-sidenav-container style="height: 900px; margin-top: 100px">
+            <mat-sidenav style="  background-color: rgb(230, 230, 230); width: 220px; padding: 16px" mode="side" #sidenav [(opened)]="opened">
+                <mat-accordion style="width: 120px">
+                    <div class="border" style="background-color:rgb(255, 255, 255); width: 200px; height: 200px; text-align: center">
+                        <img src="./../../assets/img/logo@300-2.png" style=" width: 120px; height: 118px" alt="دانشگاه">
+                        <p style="font-size: large; color:rgb(5, 5, 5)">شبکه علمی چیست ؟</p>
+                      </div>
+                    <mat-expansion-panel (opened)="panelOpenState = true"
+                    (closed)="panelOpenState = false">
+                      <mat-expansion-panel-header class="btn btn-primary">
+                        <mat-panel-title>
+                          <p style="font-size: 15px" >نقشه جامع علمی کشور</p>
+                        </mat-panel-title>
+                        <mat-panel-description>
+                         {{panelOpenState ? 'باز' : 'بسته'}}
+                        </mat-panel-description>
+                      </mat-expansion-panel-header>
+                      <button type="button" style="font-size: large; width: 150px; margin-left: 200px" [routerLink]="['/menu1a']" class="btn btn-light" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                          <p style="font-size: 15px">مقدمه</p>
+                         </button><br/>
+                         <button type="button" style="font-size: large; width: 150px" [routerLink]="['/menu1b']" class="btn btn-light" data-toggle="tooltip" data-placement="right" title="Tooltip on right">
+                            <p style="font-size: 15px"> ارزش های بنیادین نقشه جامع علمی کشور</p>
+                         </button><br/>
+                         <button type="button" style="font-size: large; width: 150px" class="btn btn-light" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+                            <p style="font-size: 15px">وضع مطلوب علم و فناوری </p>
+                         </button><br/>
+                         <button type="button" style="font-size: large; width: 150px" class="btn btn-light" [routerLink]="['/menu1d']" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+                            <p style="font-size: 15px">اولویت های علم و فناوری کشور</p>
+                         </button><br/>
+                         <button type="button" style="font-size: large; width: 150px" class="btn btn-light" [routerLink]="['/menu1e']" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+                            <p style="font-size: 15px">راهبردها و اقدامات ملی برای توسعه علم و فناوری در کشور</p>
+                         </button><br/>
+                         <button type="button" style="font-size: large; width: 150px" class="btn btn-light" [routerLink]="['/menu1f']" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+                            <p style="font-size: 15px">چارچوب نهادی علم وفناوری و نوآوری</p>
+                         </button><br/>
+                    </mat-expansion-panel>
+                    <button type="button" style="font-size: large; width: 188px" [routerLink]="['/menu2']" class="btn btn-primary  mt-1" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
+                        <p style="font-size: 20px">چرائی شبکه علمی</p>
+                     </button>
+                     <button type="button" style="font-size: large; width: 188px" [routerLink]="['/menu3']" class="btn btn-primary mt-1" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
+                        <p style="font-size: 20px">گستره جهانی</p>
+                     </button>
+                     <button type="button" style="font-size: large; width: 188px" class="btn btn-primary mt-1" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
+                        <p style="font-size: 20px">مقالات و مستندات</p>
+                     </button>
+                  </mat-accordion>
+            </mat-sidenav>
+            <mat-sidenav-content style="padding: 16px ">
+              <div class="row  mr-5" style="margin-top: 35px">
+           <div class="border" style="text-align: right">
+              <div class="formBox" style="font-size: 13pt;text-align: justify">
+                  <h3>وضع مطلوب علم و فناوری</h3>
+                  <p>
+                      وضع مطلوب علم و فناوري بر مبناي وضع موجـود علـم و فنـاوري و تحليل نقاط قوت و ضعف و فرصتها و تهديدها كه در مجموعه
+                      اسـناد پشتيبان نقشه جامع علمي آمده تدوين گرديده است.
+                  </p>
+                  <p style="font-weight: bold;">
+                      ٢ - ١. چشــم انداز علــم و فنــاوری جمهــوری اســلامی ایــران در افـــق ١٤٠٤ هجــری شمســی
+                  </p>
+                  <p>
+                      جمهوري اسـلامي ايـران در افـق 1404 هجـري شمسـي در علـم و فناوري، با اتكال به قدرت لايزال الهي و با احيـاي فرهنـگ
+                      و برپـايي تمدن نوين اسلامي- ايراني براي پيشـرفت ملـي، گسـترش عـدالت و
+                      الهام بخشي در جهان، كشوري خواهد بود:
+                  </p>
+                  <ul>
+                      <li>
+                          برخوردار از انسان هاي صالح، فرهيخته، سالم و تربيت شـده
+                          در مكتـب اسـلام و انقـلاب و بـا دانشـمنداني در طـراز
+                          برترين هاي جهان؛
+                      </li>
+                      <li>
+                          توانــا در توليــد و توســعه علــم و فنــاوري و نــوآوري و
+                          به كارگيري دستاوردهاي آن؛
+                      </li>
+                      <li>
+                          پيشتاز در مرزهاي دانش و فناوري با مرجعيـت علمـي در
+                          جهان.
+                      </li>
+                  </ul>
+                  <p style="font-weight: bold;">
+                      ٢ - ٢. اهــــداف کــــلان نظــــام علــــم و فنــــاوری کشــــور
+                  </p>
+                  <ol type="1" start="۱">
+                      <li>
+                          دستيابي به جايگـاه اول علـم وفنـاوري درجهـان اسـلام و
+                          احراز جايگاه برجسته علمي و الهام بخشي در جهان؛
+                      </li>
+                      <li>
+                          اسـتقرارجامعـه دانـش بنيـان،عـدالت محـوروبرخـورداراز
+                          انسانهاي شايسته و فرهيخته و نخبه بـراي احـراز مرجعيـت علمي در جهان؛
+                      </li>
+                      <li>
+                          تعميق وگسترش آموزش هاي عمومي وتخصصـي همـراه بـا
+                          تقويـت اخـلاق و آزادانديشـي و روحيـه خلاقيـت در آحـاد جامعه، به ويژه نسل جوان؛
+                      </li>
+                      <li>
+                          دستيابي به توسعه علوم و فناوري هاي نوين و نافع،متناسب با
+                          اولويت هــا و نيازهــا و مزيت هــاي نســبي كشــور؛ و انتشــار و
+                          به كارگيري آنها در نهادهـاي مختلـف آموزشـي و صـنعتي و
+                          خدماتي؛
+                      </li>
+                      <li>
+                          افزايش سهم توليد محصولات و خدمات مبتني بـر دانـش و
+                          فناوري داخلي به بيش از 50 درصد توليـد ناخـالص داخلـي
+                          كشور؛
+                      </li>
+                      <li>
+                          ارتقاي جايگاه زبان فارسي در بين زبان هاي بين المللي علمي؛
+                      </li>
+                      <li>
+                          كمك به ارتقاي علـم و فنـاوري در جهـان اسـلام واحيـاي
+                          موقعيـت محـوري و تـاريخي ايـران در فرهنـگ و تمـدن
+                          اسلامي؛
+                      </li>
+                      <li>
+                          گسترش همكاري در حوزه هـاي علـوم و فنـاوري بـا مراكـز
+                          علمي معتبر بين المللي.
+                      </li>
+                  </ol>
+                  <p style="font-weight: bold;">
+                      ٢ - ٣. اهـداف بخشـی نظـام علـم، فنـاوری و نـوآوری کشـور
+                  </p>
+                  <ol type="1" start="۱">
+                      <li>
+                          دستيابي آحاد جامعه به سطح مناسب دانش عمـومي و ازبـين
+                          رفتن بيسوادي؛
+                      </li>
+                      <li>
+                          پوشش كامل دوره آموزش عمومي؛
+                      </li>
+                      <li>
+                          ايجاد نظام آموزشي مناسب براي هدايت دانش آموزان درجهت:
+                          <ol type="1" start="۱">
+                              <li>
+                                  كسب فضايل، شناخت مسئوليتها و وظايف در برابر خـدا،
+                                  خود، جامعه و خلقت؛
+                              </li>
+                              <li>
+                                  تقويت قدرت تفكر و خردورزي؛
+                              </li>
+                              <li>
+                                  كسب آمادگي براي ورود بـه زنـدگي مسـتقل و تشـكيل
+                                  خانواده؛
+                              </li>
+                              <li>
+                                  حضور مسئولانه و مؤثر در نظام اجتماعي؛
+                              </li>
+                              <li>
+                                  پرورش استعدادهاي علمي براي ورود به دوره تخصصي؛
+                              </li>
+                          </ol>
+                      </li>
+                      <li>
+                          دستيابي به سطح دانش و مهارت نيروي كار كشور متناسب بـا
+                          معيار جهاني و در جهت پاسخگويي به نيازهاي جامعـه و بـازار كار داخلي و بين المللي؛
+                      </li>
+                      <li>
+                          كسب رتبه نخست در رتبه بندي دانشـگاه هاي جهـان اسـلام و
+                          احراز جايگاه شاخص در بين دانشگاههاي دنيا؛
+                      </li>
+                      <li>
+                          دستيابي به نسبت مطلوب تعداد دانشجويان تحصيلات تكميلـي
+                          به كل دانشجويان متناسب با سطح بندي دانشگاه ها و نيازهـاي كشور؛
+                      </li>
+                      <li>
+                          ارتقاء سطح مطلوب توليد علم در علوم انساني بر اساس مبـاني
+                          اسلامي و نيازهاي بومي؛
+                      </li>
+                      <li>
+                          <ul>
+                              <li>
+                                  علوم و فنـاوري هـاي حـوزه نفـت و گـاز بـه منظـور دستيابي به نقش محوري در منطقه؛
+                              </li>
+                              <li>
+                                  فناوري اطلاعـات بـه منظـور كسـب جايگـاه اول در حوزه علم و فناوري در جهان اسلام؛
+                              </li>
+                              <li>
+                                  فناوري زيسـتي بـه منظـور كسـب 3 درصـد از بـازار جهاني مربوطه؛
+                              </li>
+                              <li>
+                                  فناوري هاي نانو و ميكرو به منظـور كسـب 2 درصـد از بازار جهاني مربوطه؛
+                              </li>
+                          </ul>
+                      </li>
+                      <li>
+                          كسب دانش طراحي و ساخت نيروگاه هاي هسته اي،دسـتيابي
+                          به دانش انرژي گداخت و دستيابي به فناوري اعـزام انسـان بـه فضا و كسب دانش طراحي و ساخت و پرتاب ماهواره بـه
+                          مـدار زمين آهنگ (GEO)، با مشاركت جهـان اسـلام و همكاري هـاي
+                          بين المللي.
+                      </li>
+                  </ol>
+
+                  <p style="font-weight: bold;">
+                      ٢ - ٤. کمیـــت هـــای مطلـــوب اهـــم شـــاخص های کـــلان علــم و فنــاوری کشـــور
+                  </p>
+                  <p>كميت هاي مطلوب اهم شاخصهاي كلان علم و فناوري كشور</p>
+                  <img src="./../../assets/img/jadval1.png" style="width: 100%;display: block;">
+                  <img src="./../../assets/img/jadval2.png" style="width: 100%;display: block;">
+                  <img src="./../../assets/img/jadval3.png" style="width: 100%;display: block;">
+                  <img src="./../../assets/img/jadval4.png" style="width: 100%;display: block;">
+                  <img src="./../../assets/img/jadval5.png" style="width: 100%;display: block;">
+              </div>
+           </div>
+              </div>
+            </mat-sidenav-content>
+          </mat-sidenav-container>

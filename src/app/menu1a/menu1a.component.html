@@ -1,0 +1,141 @@
+<nav class="fixed-top">
+    <div class="row">
+    <div class="mr-3">
+        <button style="max-height: 55px; max-width: 100px "  class="btn btn" [ngClass]="{'btn-light': opened == false, 'btn-dark' : opened == true} " (click)="sidenav.toggle()">
+            {{opened ? 'منو' : 'منو' }}<br/><mat-icon aria-hidden="false" aria-label="Example menu icon">menu</mat-icon>
+        </button>
+    </div>
+  </div>
+  </nav>
+  <div class="row" style="height: 900px">
+    <div>
+    <mat-sidenav-container style="height: 900px; margin-top: 100px">
+            <mat-sidenav style="  background-color: rgb(230, 230, 230); width: 220px; padding: 16px" mode="side" #sidenav [(opened)]="opened">
+                <mat-accordion style="width: 120px">
+                    <div class="border" style="background-color:rgb(255, 255, 255); width: 200px; height: 200px; text-align: center">
+                        <img src="./../../assets/img/logo@300-2.png" style=" width: 120px; height: 118px" alt="دانشگاه">
+                        <p style="font-size: large; color:rgb(5, 5, 5)">شبکه علمی چیست ؟</p>
+                      </div>
+                    <mat-expansion-panel (opened)="panelOpenState = true"
+                    (closed)="panelOpenState = false">
+                      <mat-expansion-panel-header class="btn btn-primary">
+                        <mat-panel-title>
+                          <p style="font-size: 15px" >نقشه جامع علمی کشور</p>
+                        </mat-panel-title>
+                        <mat-panel-description>
+                         {{panelOpenState ? 'باز' : 'بسته'}}
+                        </mat-panel-description>
+                      </mat-expansion-panel-header>
+                      <button type="button" style="font-size: large; width: 150px; margin-left: 200px" [routerLink]="['/menu1a']" class="btn btn-light" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                          <p style="font-size: 15px">مقدمه</p>
+                         </button><br/>
+                         <button type="button" style="font-size: large; width: 150px" [routerLink]="['/menu1b']" class="btn btn-light" data-toggle="tooltip" data-placement="right" title="Tooltip on right">
+                            <p style="font-size: 15px"> ارزش های بنیادین نقشه جامع علمی کشور</p>
+                         </button><br/>
+                         <button type="button" style="font-size: large; width: 150px" [routerLink]="['/menu1c']" class="btn btn-light" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+                            <p style="font-size: 15px">وضع مطلوب علم و فناوری </p>
+                         </button><br/>
+                         <button type="button" style="font-size: large; width: 150px" [routerLink]="['/menu1d']" class="btn btn-light" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+                            <p style="font-size: 15px">اولویت های علم و فناوری کشور</p>
+                         </button><br/>
+                         <button type="button" style="font-size: large; width: 150px" [routerLink]="['/menu1e']" class="btn btn-light" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+                            <p style="font-size: 15px">راهبردها و اقدامات ملی برای توسعه علم و فناوری در کشور</p>
+                         </button><br/>
+                         <button type="button" style="font-size: large; width: 150px" [routerLink]="['/menu1f']" class="btn btn-light" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+                            <p style="font-size: 15px">چارچوب نهادی علم وفناوری و نوآوری</p>
+                         </button><br/>
+                    </mat-expansion-panel>
+                    <button type="button" style="font-size: large; width: 188px" [routerLink]="['/menu2']" class="btn btn-primary  mt-1" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
+                        <p style="font-size: 20px">چرائی شبکه علمی</p>
+                     </button>
+                     <button type="button" style="font-size: large; width: 188px" [routerLink]="['/menu3']" class="btn btn-primary mt-1" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
+                        <p style="font-size: 20px">گستره جهانی</p>
+                     </button>
+                     <button type="button" style="font-size: large; width: 188px" class="btn btn-primary mt-1" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
+                        <p style="font-size: 20px">مقالات و مستندات</p>
+                     </button>
+                  </mat-accordion>
+            </mat-sidenav>
+            <mat-sidenav-content style="padding: 16px ">
+              <div class="row  mr-5" style="margin-top: 35px">
+           <div class="border" style="text-align: right">
+              <div class="formBox" style="font-size: 13pt;text-align: justify">
+                  <h3>مقدمه</h3>
+                  <p>
+                      دستيابي به آرمان هاي بلند نظام مقدس جمهـوري اسـلامي ايـران مسـتلزم تلاش همه جانبه در تمام ابعاد فرهنگي، علمي،
+                      اجتماعي و اقتصادي است. از اين رو تدوين و اجراي برنامـه هـاي پيشـرفت در بـازه هـاي زمـاني معـين و اختصاص منابع
+                      لازم
+                      براي تحقق اهداف اين برنامه ها از لوازم ضـروري احـراز جايگاهي در شأن ايران اسلامي است. از سوي ديگر مقولة علـم و
+                      فنـاوري از مهمترين زيرساختهاي پيشرفت كشور و ابزار جدي رقابـت در عرصـه هـاي مختلف است. به اين ترتيب تحقق آرمان
+                      هاي
+                      متعالي انقـلاب اسـلامي ايـران نظير احياي تمدن عظيم اسلامي، حضور سـازنده، فعـال و پيشـرو در ميـان ملتها و كسب
+                      آمادگي براي برقراري عـدالت و معنويـت در جهـان در گـرو پيشرفتي همه جانبه در علم اسـت؛ علمـي كـه داراي سـه شاخصـة
+                      عـدالت،
+                      معنويت و عقلانيت است.
+                  </p>
+                  <p>
+                      تحقق اين هدف نيازمند ترسيم نقشه راهي است كه در آن نحوه طي مسير، منابع و امكانات لازم، تقسيم كار در سطح ملي و
+                      الزامات طي اين مسـير بـه طور شفاف و دقيق مشخص شـده باشـد. ازايـنرو لازم اسـت چشـمانـداز و راهبردهاي علم و فناوري
+                      در سطوح كلان و عملياتيتر نظير برنامههاي پـنج ساله توسعه كشور، تدوين شود. در ترسيم اين نقشه كوشش شده، تا با الهام
+                      گيري از اسناد بالادستي و بهرهگيري از ارزشهاي بنيـادين آنهـا و توجـه بـه اهداف راهبردي نظام جمهوري اسلامي ايران،
+                      چشمانـداز علـم و فنـاوري در افق 1404 هجري شمسي تبيين شود. در اين چشمانداز، »جمهوري اسلامي ايران با اتكال به قدرت
+                      لايزال الهي و با احياي فرهنگ و برپايي تمدن نـوين اسلامي- ايراني براي پيشرفت ملي، گسترش عدالت و الهامبخشي در
+                      جهان، كشوري برخوردار از انسانهـاي صـالح، فرهيختـه، سـالم و تربيـتيافتـه در مكتب اسلام و انقلاب و با دانشمنداني
+                      در تراز برترينهـاي جهـان؛ توانـا در توليد و توسعة علم و فناوري و نـوآوري و بـه كـارگيري دسـتاوردهاي آن و
+                      ج
+
+                      پيشتاز در مرزهاي دانش و فناوري با مرجعيت علمي در جهان« خواهد بود. رهبر معظم انقلاب اسلامي با دركي هوشمندانه از
+                      ظرفيت كشـور در ايفـاي اين نقش خطير و نيز با اشراف بر امكانات و استعدادهاي عظـيم موجـود در كشور، خواستار هدف
+                      گذاري
+                      دقيق در زمينة علم و فناوري و برنامه ريزي هاي عملياتي، زمان بندي شده و يكپارچه در سطوح مختلف اين عرصه شـده انـد.
+                      ايشان بارها بر لزوم بهره برداري بهينه از مجموعة منابع كشور براي حركتـي منظم و پيوسته از وضعيت موجود به جايگاه
+                      علمي آرمـاني، در قالـب نقشـة جامع علمي كشور تأكيـد داشـته انـد. ايـن تأكيـدات در كنـار رهنمودهـاي سال هاي گذشتة
+                      معظمله با مضامين جنبش نرم افزاري و نهضت توليد علـم و نيز انتظار جدي ايشان براي اهتمام و جديت در مسير پيشرفت علمي
+                      كشور موجب گرديد كه تدوين نقشة جامع علمي كشور به طور ويژه در دستور كار
+                      شوراي عالي انقلاب فرهنگي قرار گيرد.
+                  </p>
+                  <p>
+                      نقشة جامع علمي كشور بنا به تعريف، مجموعه اي است جامع و هماهنـگ و پويا و آينده نگر، شـامل مبـاني، اهـداف، سياسـت
+                      ها
+                      و راهبردهـا، سـاختارها و الزامات تحول راهبردي علم و فناوري مبتنـي بـر ارزش هـاي اسـلامي بـراي دستيابي به اهداف
+                      چشم انداز بيست ساله كشور در اين سند تـلاش شـده بـر مباني ارزشي و بومي كشور، تجربيات گذشته و نظريه ها و نمونه هاي
+                      علمي و تجارب عملي تكيه شود. در اين خصوص توجه به نكات زير ضروري است:
+                  </p>
+                  <ul>
+                      <li>
+                          نقشه جامع علمي كشور در چارچوب رهنمودهـاي رهبـر كبيـر
+                          انقـلاب اسـلامي)ره( و مقـام معظـم رهبـري و قـانون اساسـي
+                          جمهوري اسلامي ايران است و با پـيشبينـي سـازوكارهاي لازم بروز رساني، توانايي تبيين ساحت علمي الگوي اسلامي-
+                          ايرانـي
+                          پيشرفت را دارا ميباشد.
+                      </li>
+                      <li>
+                          اين نقشه حاصل برنامه ريـزي و فعاليـت و تـلاش كـارگروه هـاي
+                          متعدد كارشناسي در وزارت علوم، تحقيقات و فنـاوري؛ معاونـت
+                          علمي و فناوري رياسـت جمهـوري و وزارت بهداشـت، درمـان و آموزش پزشـكي؛ انجـام پژوهشـ هاي گونـاگون؛ بهـره
+                          گـرفتن
+                          از پژوهشهاي موجود و مشاركت جمع زيـادي از صـاحب نظـران و انديشمندان عرصه علم و فناوري كشور اعـم از
+                          دسـت انـدركاران سياسـتگذاري و مـديريت كـلان نظـام علمـي كشـور، مـديران، اسـتادان و پژوهشـگران دانشـگاه هـا و
+                          پژوهشـگاها، قطـب هـا و
+                          انجمن هاي علمي، كارشناسـان آمـوزش و پـرورش، صـاحب نظران حوزه علميه قم و مديران و مسؤولان علم و فناوري از
+                          دستگاهها و بخشهاي اجرايي كشور است كه از همه آنان قدرداني و تشكر
+                          ميشود.
+                      </li>
+                      <li>
+                          مجموعـه پژوهشـها و آراي صـاحبنظران كـه پشـتوانه علمـي و
+                          پژوهشي اين نقشه محسوب ميشوند در قالب مجلـدات متعـدد
+                          تحت عنوان اسناد پشتيبان نقشه جامع علمـي كشـور تنظـيم و براي بهره برداري به تدريج توسط دبيرخانه شوراي عالي
+                          انقـلاب
+                          فرهنگي در دسترس عموم قرار ميگيرد.
+                      </li>
+                  </ul>
+                  <p>
+                      با ابلاغ نقشه جامع علمي كشور لازم است كليه دستگاه هاي اجرايي و نهادها نهايت تلاش خود براي اجراي كامل برنامه ها و
+                      انجام اقدامات لازم را بـه كـار گيرند. اميد است كه با اجراي اين نقشه زمينه و بستر لازم براي تحقق كامل اهداف نظام
+                      مقدس جمهوري اسلامي ايران و انتظارات به حـق مقـام معظـم رهبري از جامعه علمي فراهم شود، انشاءاالله.
+                  </p>
+              </div>
+           </div>
+              </div>
+            </mat-sidenav-content>
+          </mat-sidenav-container>

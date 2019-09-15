@@ -1,0 +1,198 @@
+<nav class="fixed-top">
+    <div class="row">
+    <div class="mr-3">
+        <button style="max-height: 55px; max-width: 100px "  class="btn btn" [ngClass]="{'btn-light': opened == false, 'btn-dark' : opened == true} " (click)="sidenav.toggle()">
+            {{opened ? 'منو' : 'منو' }}<br/><mat-icon aria-hidden="false" aria-label="Example menu icon">menu</mat-icon>
+        </button>
+    </div>
+  </div>
+  </nav>
+  <div class="row" style="height: 900px">
+    <div>
+    <mat-sidenav-container style="height: 900px; margin-top: 100px">
+            <mat-sidenav style="  background-color: rgb(230, 230, 230); width: 220px; padding: 16px" mode="side" #sidenav [(opened)]="opened">
+                <mat-accordion style="width: 120px">
+                    <div class="border" style="background-color:rgb(255, 255, 255); width: 200px; height: 200px; text-align: center">
+                        <img src="./../../assets/img/logo@300-2.png" style=" width: 120px; height: 118px" alt="دانشگاه">
+                        <p style="font-size: large; color:rgb(5, 5, 5)">شبکه علمی چیست ؟</p>
+                      </div>
+                    <mat-expansion-panel (opened)="panelOpenState = true"
+                    (closed)="panelOpenState = false">
+                      <mat-expansion-panel-header class="btn btn-primary">
+                        <mat-panel-title>
+                          <p style="font-size: 15px" >نقشه جامع علمی کشور</p>
+                        </mat-panel-title>
+                        <mat-panel-description>
+                         {{panelOpenState ? 'باز' : 'بسته'}}
+                        </mat-panel-description>
+                      </mat-expansion-panel-header>
+                      <button type="button" style="font-size: large; width: 150px; margin-left: 200px" [routerLink]="['/menu1a']" class="btn btn-light" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                          <p style="font-size: 15px">مقدمه</p>
+                         </button><br/>
+                         <button type="button" style="font-size: large; width: 150px" [routerLink]="['/menu1b']" class="btn btn-light" data-toggle="tooltip" data-placement="right" title="Tooltip on right">
+                            <p style="font-size: 15px"> ارزش های بنیادین نقشه جامع علمی کشور</p>
+                         </button><br/>
+                         <button type="button" style="font-size: large; width: 150px" [routerLink]="['/menu1c']" class="btn btn-light" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+                            <p style="font-size: 15px">وضع مطلوب علم و فناوری </p>
+                         </button><br/>
+                         <button type="button" style="font-size: large; width: 150px" [routerLink]="['/menu1d']" class="btn btn-light" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+                            <p style="font-size: 15px">اولویت های علم و فناوری کشور</p>
+                         </button><br/>
+                         <button type="button" style="font-size: large; width: 150px" [routerLink]="['/menu1e']" class="btn btn-light" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+                            <p style="font-size: 15px">راهبردها و اقدامات ملی برای توسعه علم و فناوری در کشور</p>
+                         </button><br/>
+                         <button type="button" style="font-size: large; width: 150px" [routerLink]="['/menu1f']" class="btn btn-light" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+                            <p style="font-size: 15px">چارچوب نهادی علم وفناوری و نوآوری</p>
+                         </button><br/>
+                    </mat-expansion-panel>
+                    <button type="button" style="font-size: large; width: 188px" [routerLink]="['/menu2']" class="btn btn-primary  mt-1" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
+                        <p style="font-size: 20px">چرائی شبکه علمی</p>
+                     </button>
+                     <button type="button" style="font-size: large; width: 188px" [routerLink]="['/menu3']" class="btn btn-primary mt-1" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
+                        <p style="font-size: 20px">گستره جهانی</p>
+                     </button>
+                     <button type="button" style="font-size: large; width: 188px" class="btn btn-primary mt-1" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
+                        <p style="font-size: 20px">مقالات و مستندات</p>
+                     </button>
+                  </mat-accordion>
+            </mat-sidenav>
+            <mat-sidenav-content style="padding: 16px ">
+              <div class="row  mr-5" style="margin-top: 35px">
+           <div class="border" style="text-align: right">
+              <div class="formBox" style="font-size: 13pt;text-align: justify">
+                  <h3>چهار جوب نهادی علم و فناوری و نو آوری</h3>
+                  <p style="font-weight: bold">
+                      الف) سیاستگذاری کلان و نظارت و ارزیابی
+                  </p>
+                  <p>
+                      سياسـت گذاري و تصـميمگيـري كـلان و راهبـردي نظـام علـم و فناوري، روزآمد سازي و اجرايي كردن نقشة جامع علمي كشور و
+                      ارزيابي و نظارت بر حسن اجراي آن، سياسـتگذاري كـلان بـراي
+                      همكاري هاي بين المللي در عرصه علم و فناوري و تصويب اسـناد ملي فناوريهاي اولويت دار بر عهدة شوراي عالي انقـلاب
+                      فرهنگـي است كه با سازوكار مورد نظر شورا انجام ميگيرد.
+                  </p>
+                  <p style="font-weight: bold">
+                      ب) سیاســتگذاری اجرایـی و همـاهنگی و انسجام بخشی
+                      اجرای نقشه جامع علمی کشور
+                  </p>
+                  <p>
+                      به منظور تهيه و تصـويب و ابـلاغ سياسـتهاي اجرايـي، طراحـي سازوكار تحقق اهـداف نقشـه و اصـلاح سـاختارها و
+                      فرآينـدهاي مربوطه، هماهنگي و انسجام بخشي در اجراي نقشه جامع علمـي و نظارت بر حسن اجراي آن، "ستاد راهبري اجراي
+                      نقشـه جـامع علمي كشور" توسط شوراي عالي انقلاب فرهنگي با تركيـب زيـر
+                      ايجاد ميگردد:
+                  </p>
+                  <ol type="1" start="۱">
+                      <li>
+                          دبيرشوراي عالي انقلاب فرهنگي(رئيس)
+                      </li>
+                      <li>
+                          چهارنفرازاعضاي حقيقي به انتخاب شورا
+                      </li>
+                      <li>
+                          رئيس نهاد نمايندگي مقام معظم رهبـري در دانشـگاه ها بـا
+                          اجازه معظم له
+                      </li>
+                      <li>
+                          وزيرعلوم،تحقيقات و فناوري
+                      </li>
+                      <li>
+                          معاون علمي و فناوري رياست جمهوري
+                      </li>
+                      <li>
+                          وزير بهداشت، درمان و آموزش پزشكي
+                      </li>
+                      <li>
+                          وزيرآموزش و پرورش
+                      </li>
+                      <li>
+                          رئيس كميسيون آموزش و تحقيقات مجلس شوراي اسلامي
+                      </li>
+                      <li>
+                          رئيس كميسيون بهداشت و درمان مجلس شوراي اسلامي
+                      </li>
+                      <li>
+                          يـك نفـر از مدرسـين حـوزوي بـه انتخـاب شـوراي عـالي
+                          حوزه هاي علميه
+                      </li>
+                  </ol>
+                  <p>
+                      تبصره: با توجه به تنوع ارتباط نظام علم و فناوري با عرصـه هـاي مختلف فرهنگي، صنعتي، توليـدي و خـدماتي، در مـوارد
+                      لازم از وزرا و رؤساي نهادهاي ذيربط جهت شركت در جلسـات سـتاد و كميسيون هاي مربوط دعوت به عمل خواهد آمد.
+                  </p>
+                  <p style="font-weight: bold">
+                      ج) برنامه ریزی و اجرا و فرهنگ سازی
+                  </p>
+                  <p>
+                      وزارت علوم، تحقيقات و فناوري، معاونت علمي و فنـاوري رئـيس جمهوري و بنياد ملي نخبگان، وزارت بهداشت، درمان و
+                      آمـوزش پزشكي، وزارت آموزش و پرورش، فرهنگسـتانهاي كشـور، جهـاد دانشگاهي، مركز همكاري هاي فناوري و نوآوري رياست
+                      جمهـوري،
+                      ساير وزارتخانه ها و نهادها و مؤسسـات علمـي و فنـاوري، صـدا و ســيما، وزارت فرهنــگ و ارشــاد اســلامي و ســاير
+                      نهادهــا و دستگاههاي تبليغي و فرهنگي كشور، در فرآيند اجرايينمـودن و فرهنگ سازي نقشه در چارچوب سياستهاي مصوب
+                      شوراي عـالي انقلاب فرهنگي با ستاد راهبري اجراي نقشة جامع علمـي كشـور همكاري مينمايند.
+                  </p>
+                  <p style="font-weight: bold">
+                      ٥ - ٢. نظــــام اجـــرا، نظـــارت، ارزیـــابی و بـه روز رســـانی نقشــه جامــع علــمی کشـــور
+                  </p>
+                  <p>
+                      اتخاذ تدابير لازم در لايههاي مختلف نظـام علـم و فنـاوري و ترسـيم صحيح و شفاف گردش فعاليت هـا و تعـاملات در بـين
+                      اجـزاي نظـام، ضامن اجراي نقشه و ارتقـاي بهـره وري كشـور در ايـن زمينـه اسـت.
+                      همچنين حفظ و استمرار كاركرد نقشه جامع علمي مستلزم پـايش و مراقبت از پيشرفت اجراي نقشه در افق زماني پيشبينيشده
+                      براي آن و مراقبت از صحت و اعتبار اجزاي مختلف نقشه اسـت. ايـن پـايش و مراقبت بايد به گونه اي باشد كه جهت گيـري
+                      نظـام
+                      اجرايـي نقشـه بـه سوي دستيابي به اهداف آن حفـظ شـود و در صـورت بـروز هرگونـه تغييرات اثرگذار در مفروضات و اوضاع
+                      محيطي، اين تغييرات در كوتاه ترين زمان شناسايي و آثار آن تحليل شود و مراجع مربـوط اقـدامات اصلاحي مورد نياز را به
+                      تصويب برسانند. به اين منظور:
+                  </p>
+                  <ol type="1" start="۱">
+                      <li>
+                          ستاد راهبري اجـراي نقشـة جـامع علمـي كشـور بـا ايجـاد
+                          سازوكارهاي لازم و استفاده از نهادهاي مختلف، ضمن انجـام تصميم گيري هاي لازم و ابلاغ مصوبات، وظيفه نظارت بر
+                          تحقق
+                          اهداف نقشه و ارزيابي پيشرفت كار را عهده دار است.
+                      </li>
+                      <li>
+                          ستاد راهبري اجراي نقشة جامع علمي كشـور موظـف اسـت
+                          پس از تصويب و ابلاغ نقشه جامع علمـي در فواصـل زمـاني خاص به تكميـل و بـه روزرسـاني اولويت هـاي علـم و
+                          فنـاوري
+                          كشور، ارائة اسناد ملي مربوطه و تعيين نوع پشتيباني در هـر
+                          زمينه اقدام كند.
+                      </li>
+                      <li>
+                          ستاد راهبري اجراي نقشة جامع علمـي كشـور بـا همكـاري
+                          دستگاه ها و نهادهاي مسئول و مؤسسات پژوهشي- مطالعاتي شاخصـهاي علـم و فنـاوري مـورد نيـاز وكميت هـاي مطلـوب
+                          مربوطه را تكميل و بروز ميرساند.
+                      </li>
+                      <li>
+                          ستاد راهبري اجراي نقشة جامع علمي كشور موظف است بـا
+                          همكاري دستگاه هاي ذيـربط گـزارش وضـع موجـود علـم و
+                          فناوري كشور را براساس شاخص هاي نقشه جامع علمي كشور
+                          طي يكسال تـدوين كنـد. عـلاوه بـر آن ايـن سـتاد گـزارش ارزيابي وضع موجود علم و فناوري كشور را هر ساله بر اساس
+                          آخرين شاخصها تدوين ميكند و به شـوراي عـالي انقـلاب فرهنگي تسليم مينمايد.
+                      </li>
+                      <li>
+                          ستاد راهبري اجراي نقشه جامع علمي كشور موظف است بـا
+                          رصد وضعيت پذيرش دانشجو در رشته ها و مقاطع تحصـيلي در دانشگاه هاي دولتي و غير دولتي سـاليانه گـزارش ميـزان
+                          نياز كشور به اين رشته ها و مقاطع را با توجه به اولويت هـاي
+                          ملي و تهديدها و فرصتها و امكانات كشور تهيـه كنـد و بـه
+                          همراه گزارش اقدامات خود بـراي اصـلاح وضـع موجـود، بـه شوراي عالي انقلاب فرهنگي ارائه نمايد.
+                      </li>
+                      <li>
+                          كلية دستگاههاي اجرايي موظف اند در چارچوب سياسـت هاي
+                          اجرايي ستاد راهبري اجراي نقشـة جـامع علمـي، طرح هـا و برنامه هاي خود را بـراي اجـراي ايـن نقشـه تـدوين و
+                          بـراي بررسي و تصويب به ستاد تسليم نمايند. ستاد موظـف اسـت ميزان پيشرفت و عملكـرد طرحهـا و برنامـه هـاي
+                          ارائـهشـده دستگاههاي اجرايي را در فواصـل يكسـاله بـه شـوراي عـالي انقلاب فرهنگي گزارش نمايد.
+                      </li>
+                      <li>
+                          شوراي عالي انقلاب فرهنگي در صورت نياز جهـت اصـلاح و
+                          تصويب قوانين بـامجلـس شـوراي اسـلامي تعامـل خواهـد داشت.
+                      </li>
+                      <li>
+                          ستاد راهبري اجراي نقشة جامع علمي كشـور موظـف اسـت
+                          ضمن رصد و پايش اوضاع محيطي و رقبا و تحـولات جهـاني علم و فناوري با رويكرد آينـده پژوهـي، نقشـه جـامع علمـي
+                          كشور را به صورت دورهاي، روزآمد مي نمايد و بـراي تصـويب به شوراي عالي انقلاب فرهنگي ارائه دهد.
+                      </li>
+                  </ol>
+              </div>
+           </div>
+              </div>
+            </mat-sidenav-content>
+          </mat-sidenav-container>

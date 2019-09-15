@@ -1,0 +1,99 @@
+<nav class="fixed-top">
+    <div class="row">
+    <div class="mr-3">
+        <button style="max-height: 55px; max-width: 100px "  class="btn btn" [ngClass]="{'btn-light': opened == false, 'btn-dark' : opened == true} " (click)="sidenav.toggle()">
+            {{opened ? 'منو' : 'منو' }}<br/><mat-icon aria-hidden="false" aria-label="Example menu icon">menu</mat-icon>
+        </button>
+    </div>
+  </div>
+  </nav>
+  <div class="row" style="height: 900px">
+    <div>
+    <mat-sidenav-container style="height: 900px; margin-top: 100px">
+            <mat-sidenav style="  background-color: rgb(230, 230, 230); width: 220px; padding: 16px" mode="side" #sidenav [(opened)]="opened">
+                <mat-accordion style="width: 120px">
+                    <div class="border" style="background-color:rgb(255, 255, 255); width: 200px; height: 200px; text-align: center">
+                        <img src="./../../assets/img/logo@300-2.png" style=" width: 120px; height: 118px" alt="دانشگاه">
+                        <p style="font-size: large; color:rgb(5, 5, 5)">شبکه علمی چیست ؟</p>
+                      </div>
+                    <mat-expansion-panel (opened)="panelOpenState = true"
+                    (closed)="panelOpenState = false">
+                      <mat-expansion-panel-header class="btn btn-primary">
+                        <mat-panel-title>
+                          <p style="font-size: 15px" >نقشه جامع علمی کشور</p>
+                        </mat-panel-title>
+                        <mat-panel-description>
+                         {{panelOpenState ? 'باز' : 'بسته'}}
+                        </mat-panel-description>
+                      </mat-expansion-panel-header>
+                      <button type="button" style="font-size: large; width: 150px; margin-left: 200px" [routerLink]="['/menu1a']" class="btn btn-light" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                          <p style="font-size: 15px">مقدمه</p>
+                         </button><br/>
+                         <button type="button" style="font-size: large; width: 150px" [routerLink]="['/menu1b']" class="btn btn-light" data-toggle="tooltip" data-placement="right" title="Tooltip on right">
+                            <p style="font-size: 15px"> ارزش های بنیادین نقشه جامع علمی کشور</p>
+                         </button><br/>
+                         <button type="button" style="font-size: large; width: 150px" [routerLink]="['/menu1c']" class="btn btn-light" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+                            <p style="font-size: 15px">وضع مطلوب علم و فناوری </p>
+                         </button><br/>
+                         <button type="button" style="font-size: large; width: 150px" [routerLink]="['/menu1d']" class="btn btn-light" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+                            <p style="font-size: 15px">اولویت های علم و فناوری کشور</p>
+                         </button><br/>
+                         <button type="button" style="font-size: large; width: 150px" [routerLink]="['/menu1e']" class="btn btn-light" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+                            <p style="font-size: 15px">راهبردها و اقدامات ملی برای توسعه علم و فناوری در کشور</p>
+                         </button><br/>
+                         <button type="button" style="font-size: large; width: 150px" [routerLink]="['/menu1f']" class="btn btn-light" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+                            <p style="font-size: 15px">چارچوب نهادی علم وفناوری و نوآوری</p>
+                         </button><br/>
+                    </mat-expansion-panel>
+                    <button type="button" style="font-size: large; width: 188px" [routerLink]="['/menu2']" class="btn btn-primary  mt-1" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
+                        <p style="font-size: 20px">چرائی شبکه علمی</p>
+                     </button>
+                     <button type="button" style="font-size: large; width: 188px" [routerLink]="['/menu3']" class="btn btn-primary mt-1" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
+                        <p style="font-size: 20px">گستره جهانی</p>
+                     </button>
+                     <button type="button" style="font-size: large; width: 188px" class="btn btn-primary mt-1" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
+                        <p style="font-size: 20px">مقالات و مستندات</p>
+                     </button>
+                  </mat-accordion>
+            </mat-sidenav>
+            <mat-sidenav-content style="padding: 16px ">
+              <div class="row  mr-5" style="margin-top: 35px">
+           <div class="border" style="text-align: right">
+              <h3> واقعا هدف از راه‌اندازی شبکه علمی در جهان چیست </h3>
+      <div style="font-size: 18px">
+        <p>
+  شبکه علمی در جهان در زمره Closed Network های خاص، حاوی مجموعه اطلاعاتی است که بخش آینده‌پژوه ـ آینده‌ساز کشور ، برنامه‌های تحقیقاتی ، خدمات و اطلاعاتی غیرقابل دسترس برای عموم را برای دیگر همکاران مجاز شده خود به اشتراک می‌گذارد. از اینرو و براساس این هدف مشخص است که در تمامی جهان ، دسترسی به شبکه‌های علمی تابع قوانین سخت‌گیرانه‌تری ، نسبت به اتصال به اینترنت بوده و می‌باشد. خدمات را به دیگر مشترکین ارائه می‌نمایند.
+
+  </p>
+  شبکه‌‎های علمی ، دارای ارتباطات کنترل شده با دیگر شبکه‌های اطلاعاتی هستند و بدین‌ترتیب در زمره Open Interconnection Network قرار نمی‌گیرند. بدیهی است یک شبکه عام، هرچقدر با دیگر شبکه‌های موازی و مجاور ، در سطح ملی و بین‌المللی مرتبط باشد ، موفق‌تر خواهد بود. در حالی که شبکه‌های علمی به نحوی پیاده‌سازی می‌گردند که نخست ، دارای دروازه‌های ارتباطی Gateway های محدود و منحصر به فرد و خاصی با دیگر شبکه‌های علمی بوده و بخش اندکی از اطلاعات خود را به صورت عام برای عموم بینندگان شبکه جهانی اینترنت به نمایش بگذارند.
+
+  <p>
+  براین اساس ، شبکه‌های علمی ، شاهراه ارتباطی و انتقال‌دهنده دانش مابین مشترکین خاص خود است که از یک سوی نیازمند خدمات زیرساختی خاص (مانند سرویس‌های پرسرعت و بدون تاخیر و امکانات ابری پردازشی خاص منظوره) بوده و از سوی دیگر ، تولیدکننده ، توسعه‌‌دهنده و ارائه‌کننده خدمات و اطلاعاتی است که در بستر اینترنت، دستیابی به آنها ، یا ممکن نیست و یا هزینه بسیار بالائی دارد.
+
+  </p>
+  عدم توجه به این دیدگاه ، یکی از دو معضل اساسی کندی و عدم موفقیت و توسعه متقارن شبکه علمی در ایران گردیده است.. هماره ، تا قبل از نسل سوم شبکه علمی ، نگاه متقاضیان به شبکه علمی، حداکثر به عنوان اپراتوری جهت تامین‌ اینترنت دانشگاه‌ها، آن هم به صورت رایگان و یا حداقل ارزان‌تر از دیگر اپراتورها بوده است. چالشی که از بدو آغاز پیاده‌سازی نسل سوم تلاش بر رفع آن شده است.
+
+  <p>
+  براساس آمارهای حاصله از مراکز تحقیقاتی وب جهانی، تنها کمتر از پنج درصد از فضای وب، محتوائی است که در برخورد عامیانه با مفهوم اینترنت شناخته می‌شود. یکی از اساسی‌ترین منابع آنچه نزدیک به نود و پنج درصد باقیمانده اینترنت را تشکیل داده و به منزله‌ی Deep Web در کوه یخی فضای اطلاعاتی قرار می‌گیرد ، شبکه‌های علمی است که دسترسی به آن تابع شرایط مشخص بوده و در سطح کشوری و مجموعه‌های بین‌المللی و جغرافیائی طبیعی ، سیاسی ، اجتماعی ، اقتصادی و فرهنگی همسو و هم هدف ، ایجاد ، توسعه و مورد بهره‌‌برداری قرار می‌گیرد.
+
+  </p>
+  بدین‌ترتیب نسل سوم شبکه علمی کشور ، نگاه خود را از جایگاه به شدت تقلیل‌یافته، صرفا یک Internet Service Provider ارزان قیمت بودن، خارج نموده و در تلاش است با نگاهی همگرایانه، دسترسی به بخشی از عمق کوه یخ اطلاعاتی جهانی را برای مشترکین خود پدید آورده و از آن مهم‌تر، بسترساز توسعه‌دهندگان این عمق دست‌نیافتنی و گران‌بها در سطح جهانی باشد. نگاهی که مبتنی بر سند بالادستی توسعه 1404 کشور و همچنین نقشه جامع علمی کشور تدوین گردیده است و بدیهی است که لزوم توجه به صحت و اجرای این موضوع از اهمیت بالائی برای توسعه علم در کشور ایفا می‌کند.
+
+  <p>
+  به عنوان تصویری مشخص از تفاوت این دو فضای اطلاعاتی ، بد نیست تا در چهارچوب سه نکته اساسی، تفاوت مابین این دو شبکه اطلاعاتی و توجه ویژه جهانی به شبکه علمی یادآوری گردد :
+  </p>
+  این مدل از نگاه کلی دارای دو دسته خدمات کاملا مجزا می‌باشد :
+  <li>
+  کشورهای حوزه آمریکای شمالی و اروپا براساس یک روند تاریخی ، خود از مبدعان و توسعه‌دهندگان فعلی اینترنت محسوب گردیده و سال‌هاست دسترسی به فضای اینترنتی حاصل از اطلاعات هدف‌گذاری ایش
+  </li>
+  <li>
+  کشورهای حوزه آمریکای شمالی صاحب نزدیک به 42 شبکه علمی مجزا هستند که بخشی از آن را با دیگر شبکه‌های علمی تبادل نموده و بخش بسیار اندکی را نیز در فضای اینترنت به اشتراک جهانی می‌گذارند.
+  </li>
+  <li>
+  کشورهای حوزه اروپا نزدیک به 25 شبکه علمی مجزا با همان شرایط ذکر شده سطور فوق در اختیار دارند.
+  </li>
+        </div>
+           </div>
+              </div>
+            </mat-sidenav-content>
+          </mat-sidenav-container>

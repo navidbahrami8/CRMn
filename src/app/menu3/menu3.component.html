@@ -1,0 +1,69 @@
+<nav class="fixed-top">
+  <div class="row">
+  <div class="mr-3">
+      <button style="max-height: 55px; max-width: 100px "  class="btn btn" [ngClass]="{'btn-light': opened == false, 'btn-dark' : opened == true} " (click)="sidenav.toggle()">
+          {{opened ? 'منو' : 'منو' }}<br/><mat-icon aria-hidden="false" aria-label="Example menu icon">menu</mat-icon>
+      </button>
+  </div>
+</div>
+</nav>
+<div class="row" style="height: 900px">
+  <div>
+  <mat-sidenav-container style="height: 900px; margin-top: 100px">
+          <mat-sidenav style="  background-color: rgb(230, 230, 230); width: 220px; padding: 16px" mode="side" #sidenav [(opened)]="opened">
+              <mat-accordion style="width: 120px">
+                  <div class="border" style="background-color:rgb(255, 255, 255); width: 200px; height: 200px; text-align: center">
+                      <img src="./../../assets/img/logo@300-2.png" style=" width: 120px; height: 118px" alt="دانشگاه">
+                      <p style="font-size: large; color:rgb(5, 5, 5)">شبکه علمی چیست ؟</p>
+                    </div>
+                  <mat-expansion-panel (opened)="panelOpenState = true"
+                  (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header class="btn btn-primary">
+                      <mat-panel-title>
+                        <p style="font-size: 15px" >نقشه جامع علمی کشور</p>
+                      </mat-panel-title>
+                      <mat-panel-description>
+                       {{panelOpenState ? 'باز' : 'بسته'}}
+                      </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <button type="button" style="font-size: large; width: 150px; margin-left: 200px" [routerLink]="['/menu1a']" class="btn btn-light" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                        <p style="font-size: 15px">مقدمه</p>
+                       </button><br/>
+                       <button type="button" style="font-size: large; width: 150px" [routerLink]="['/menu1b']" class="btn btn-light" data-toggle="tooltip" data-placement="right" title="Tooltip on right">
+                          <p style="font-size: 15px"> ارزش های بنیادین نقشه جامع علمی کشور</p>
+                       </button><br/>
+                       <button type="button" style="font-size: large; width: 150px" [routerLink]="['/menu1c']" class="btn btn-light" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+                          <p style="font-size: 15px">وضع مطلوب علم و فناوری </p>
+                       </button><br/>
+                       <button type="button" style="font-size: large; width: 150px" [routerLink]="['/menu1d']" class="btn btn-light" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+                          <p style="font-size: 15px">اولویت های علم و فناوری کشور</p>
+                       </button><br/>
+                       <button type="button" style="font-size: large; width: 150px" [routerLink]="['/menu1e']" class="btn btn-light" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+                          <p style="font-size: 15px">راهبردها و اقدامات ملی برای توسعه علم و فناوری در کشور</p>
+                       </button><br/>
+                       <button type="button" style="font-size: large; width: 150px" [routerLink]="['/menu1f']" class="btn btn-light" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+                          <p style="font-size: 15px">چارچوب نهادی علم وفناوری و نوآوری</p>
+                       </button><br/>
+                  </mat-expansion-panel>
+                  <button type="button" style="font-size: large; width: 188px" [routerLink]="['/menu2']" class="btn btn-primary  mt-1" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
+                      <p style="font-size: 20px">چرائی شبکه علمی</p>
+                   </button>
+                   <button type="button" style="font-size: large; width: 188px" class="btn btn-primary mt-1" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
+                      <p style="font-size: 20px">گستره جهانی</p>
+                   </button>
+                   <button type="button" style="font-size: large; width: 188px" class="btn btn-primary mt-1" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
+                      <p style="font-size: 20px">مقالات و مستندات</p>
+                   </button>
+                </mat-accordion>
+          </mat-sidenav>
+          <mat-sidenav-content style="padding: 16px ">
+            <div class="row  mr-5" style="margin-top: 35px">
+         <div class="border" style="text-align: right">
+            <h3>گستره ی جهانی</h3>
+    <div style="font-size: 18px">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d962.9794931854365!2d51.42259875929388!3d35.724644133875735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1567885213430!5m2!1sen!2s" width="1250px" height="800PX" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+      </div>
+         </div>
+            </div>
+          </mat-sidenav-content>
+        </mat-sidenav-container>
